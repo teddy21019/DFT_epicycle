@@ -29,6 +29,11 @@ function draw() {
 
   const dt = TWO_PI / fourier.length * speed;
   time += dt;
+  
+  if (time > TWO_PI) {
+    time = 0;
+    path = [];
+  }
 
 }
 function epicycles(x, y, rotation, fourier) {
